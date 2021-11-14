@@ -41,15 +41,6 @@ const inputOperator = (operator) => {
     currentNumber = '0';
 }
 
-const persentage = document.querySelector(".persentage");
-
-persentage.addEventListener("click", (event) => {
-    inputPersentage(event.target.value);
-});
-
-const inputPersentage = (number) => {
-
-}
 
 const equalSign = document.querySelector(".equal-sign");
 
@@ -108,3 +99,13 @@ inputDecimal = (dot) => {
     currentNumber += dot;
 }
 
+const deleteBtn = document.querySelector(".hapus");
+
+deleteBtn.addEventListener("click", () => {
+    hapus();
+    updateScren(currentNumber);
+});
+
+const hapus = () => {
+    currentNumber = currentNumber.toString().slice(0, -1);
+}
